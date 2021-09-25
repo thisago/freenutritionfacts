@@ -61,7 +61,7 @@ using
   page: Page
   self: var FoodProps
 
-const url = "http://freenutritionfacts.com".parseUri
+const url = "http://www.freenutritionfacts.com".parseUri
 
 func gen(url: Uri; path: string; page): string =
   result = uri.`/`(url, path).`$` & "/"
@@ -121,6 +121,7 @@ proc extract*(self; page) =
   var client = newHttpClient()
   let html = client.getContent(url.gen(self.name, page)).parseHtml
   let data = html.extractData(pageNutrients).toTable
+  #echo html.extractData(pageNutrients)
   self.grams = data["grams"]
   case page:
   of pageNutrients:
@@ -173,6 +174,8 @@ proc extractAll*(self) =
     self.extract page
 
 when isMainModule:
+  import pkg/jsony
+  #echo "Food:"
   var data = initFoodProps stdin.readLine.strip
   # var data = initFoodProps "wine-alcoholic-beverage" # stdin.readLine.strip
   # var data = initFoodProps "cream" # stdin.readLine.strip
@@ -183,4 +186,4 @@ when isMainModule:
   #data.extract pageCalories
   #data.extract pageFat
   data.extractAll()
-  echo data
+  echo data.toJson

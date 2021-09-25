@@ -10,6 +10,12 @@
 
 Changes
 
+## Version 0.3.0 (09/25/2021)
+
+- All data is now extracted
+
+---
+
 ## Version 0.2.0 (09/25/2021)
 
 - Added missing data

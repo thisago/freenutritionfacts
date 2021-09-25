@@ -13,11 +13,11 @@ Extract data from freenutritionfacts.com
 ## Features
 
 Data extracted
-- [ ] Grams considerated (normally is 100g)
+- [x] Grams considerated (normally is 100g)
 - [x] Total fat
 - [x] Energy
-- [ ] Alcohol
-- [ ] Nutrients
+- [x] Alcohol
+- [x] Nutrients
   - [x] Carbohydrates
   - [x] Sugar
   - [x] Fiber

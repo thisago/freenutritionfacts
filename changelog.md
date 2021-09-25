@@ -10,6 +10,13 @@
 
 Changes
 
+## Version 0.2.0 (09/25/2021)
+
+- Added missing data
+- Performance improvement
+
+---
+
 ## Version 0.1.0 (09/24/2021 23:28:05 Friday)
 
 - extractor working

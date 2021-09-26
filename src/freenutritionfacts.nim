@@ -40,7 +40,7 @@ type
     energy*: string # kcal
   FoodNutrients* = object
     carbohydrates*, sugar*, fiber*, protein*, caffeine*,
-        water*: string
+      water*: string
   FoodMinerals* = object
     calcium*, iron*, phosphorus*, sodium*, copper*, magnesium*, potassium*,
       zinc*, fluorine*, manganese*, selenium*: string
@@ -171,7 +171,8 @@ proc extract*(self; page) =
 
 proc extractAll*(self) =
   for page in Page:
-    self.extract page
+    if page != Page.pageCalories:
+      self.extract page
 
 when isMainModule:
   import pkg/jsony

@@ -10,6 +10,15 @@
 
 Changes
 
+## Version 1.0.0 (09/26/2021)
+
+- Release version!
+- Added parsing for categories
+- Reorganized project
+
+---
+
+
 ## Version 0.3.0 (09/25/2021)
 
 - All data is now extracted

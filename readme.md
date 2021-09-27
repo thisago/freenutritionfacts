@@ -1,6 +1,6 @@
 <!--
   Created at: 09/24/2021 20:35:40 Friday
-  Modified at: 09/24/2021 11:27:36 PM Friday
+  Modified at: 09/27/2021 05:52:20 PM Monday
 
         Copyright (C) 2021 Thiago Navarro
   See file "license" for details about copyright
@@ -58,8 +58,9 @@ Data extracted
 
 ## TODO
 
-- [ ] parse unit instead saving string
+- [ ] Parse unit instead saving string
 - [ ] Use the `a[name="prop"]` in page
+- [ ] make requests with `async`
 
 ## Info
 

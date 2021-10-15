@@ -18,7 +18,8 @@ using
 type
   FindAttr* = tuple
     attr, val: string
-  
+
+# TODO: Move this to `findxml`
 func findAll*(node; tagName: string; attrs: openArray[FindAttr];
              caseInsensitive = false): seq[XmlNode] =
   ## Find all tags with given attributes
@@ -35,4 +36,3 @@ func findAll*(node; sels: openArray[(string, seq[FindAttr])];
     if result.len == 0:
       break
     el = result[0]
-  

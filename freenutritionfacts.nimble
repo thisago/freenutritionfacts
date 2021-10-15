@@ -1,7 +1,7 @@
 # Package
 
-version       = "0.1.0"
-author        = "Thiago Navarro"
+version       = "1.1.0"
+author        = "Thiago Ferreira"
 description   = "Freenutritionfacts extractor"
 license       = "MIT"
 srcDir        = "src"
@@ -9,4 +9,4 @@ srcDir        = "src"
 
 # Dependencies
 
-requires "nim >= 1.5.1"
+requires "nim >= 1.0.0"

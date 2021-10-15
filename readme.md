@@ -1,8 +1,8 @@
 <!--
   Created at: 09/24/2021 20:35:40 Friday
-  Modified at: 09/27/2021 05:52:20 PM Monday
+  Modified at: 10/15/2021 01:31:22 PM Friday
 
-        Copyright (C) 2021 Thiago Navarro
+        Copyright (C) 2021 Thiago Ferreira
   See file "license" for details about copyright
 -->
 
@@ -15,6 +15,7 @@ Extract data from freenutritionfacts.com
 Data extracted
 - [x] Food
 	- [x] Grams considerated (normally is 100g)
+	- [x] Category
 	- [x] Total fat
 	- [x] Energy
 	- [x] Alcohol

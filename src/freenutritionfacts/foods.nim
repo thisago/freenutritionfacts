@@ -12,12 +12,12 @@ type
   FoodProps* = object
     name*: string
     grams*: string
+    energy*: string # kcal
     others*: FoodOthers
     nutrients*: FoodNutrients
     vitamins*: FoodVitamins
     minerals*: FoodMinerals
     fat*: FoodFat
-    energy*: string # kcal
   FoodNutrients* = object
     carbohydrates*, sugar*, fiber*, protein*, caffeine*,
       water*: string
@@ -69,7 +69,7 @@ func extractData(node; page): seq[(string, string)] =
           result.add (title, gaugeInfo[0].innerText)
       else:
         {.fatal: "Not implemented".}
-        
+
     # for each sub section in box
     for subBox in box.findAll("div", {"class": "panel panel-default"}):
       # get subtitle
@@ -154,10 +154,10 @@ proc extractAll*(self) =
       self.extract page
 
 when isMainModule:
-  import pkg/jsony
+  import std/json
   #echo "Food:"
-  var data = initFoodProps stdin.readLine.strip
-  # var data = initFoodProps "wine-alcoholic-beverage" # stdin.readLine.strip
+  # var data = initFoodProps stdin.readLine.strip
+  var data = initFoodProps "wine-alcoholic-beverage" # stdin.readLine.strip
   # var data = initFoodProps "cream" # stdin.readLine.strip
   #data.extract pageNutrients
   #echo data
@@ -166,4 +166,5 @@ when isMainModule:
   #data.extract pageCalories
   #data.extract pageFat
   data.extractAll()
-  echo data.toJson
+  # echo data.toJson
+  echo %*data
